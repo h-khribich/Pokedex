@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+.card-types {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-type {
+  padding: .1rem .4rem;
+  border: black 1px solid;
+  border-radius: 5px;
+}
