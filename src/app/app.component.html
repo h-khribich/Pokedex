@@ -1,19 +1,3 @@
-<h1 class="center">Liste de Pokémon</h1>
+<h1 class="center">Pokédex</h1>
 
-<div class="container">
-  <div class="row">
-    <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
-      <div class="card horizontal">
-        <img [src]="pokemon.picture" [alt]="pokemon.name">
-        <div class="card-stacked">
-          <div class="card-content">
-            <p>{{ pokemon.name }}</p>
-            <div class="card-types"> 
-              <span class="card-type" *ngFor="let type of pokemon.types">{{ type }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>

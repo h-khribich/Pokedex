@@ -1,4 +1,6 @@
-
+.container {
+  width: 80%;
+}
 
 .card-types {
   display: flex;
