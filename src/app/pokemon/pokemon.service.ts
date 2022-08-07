@@ -13,7 +13,7 @@ export class PokemonService {
     return POKEMONS.find(pokemon => pokemon.id == pokemonId);
   }
 
-  getPokemomnTypeList(): string[] {
+  getPokemonTypeList(): string[] {
     return [
       'Plante', 
       'Feu', 
