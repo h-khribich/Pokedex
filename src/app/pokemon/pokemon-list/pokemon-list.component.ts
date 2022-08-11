@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Pokemon } from '../pokemon';
-import { PokemonService } from '../pokemon.service';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { Pokemon } from "../pokemon";
+import { PokemonService } from "../pokemon.service";
 
 @Component({
-  selector: 'app-pokemon-list',
-  templateUrl: './pokemon-list.component.html',
+  selector: "app-pokemon-list",
+  templateUrl: "./pokemon-list.component.html",
 })
 export class PokemonListComponent implements OnInit {
   pokemonList: Pokemon[];
@@ -13,9 +13,12 @@ export class PokemonListComponent implements OnInit {
   constructor(private router: Router, private pokemonService: PokemonService) {}
 
   ngOnInit() {
-      this.pokemonList = this.pokemonService.getPokemonList();
+    this.pokemonService
+      .getPokemonList()
+      .subscribe((pokemonList) => (this.pokemonList = pokemonList));
   }
+
   goToPokemon(pokemon: Pokemon) {
-    this.router.navigate(['/pokemon', pokemon.id])
+    this.router.navigate(["/pokemon", pokemon.id]);
   }
 }
